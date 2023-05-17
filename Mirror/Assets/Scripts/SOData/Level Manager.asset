@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe0e125e791edf40a26b21f532901ef, type: 3}
   m_Name: Level Manager
   m_EditorClassIdentifier: 
-  levelCleared: 00000000010100010101010100000100
+  levelCleared: 00000000010000000001010001000000

@@ -8,6 +8,8 @@ public class Checkpoint : MonoBehaviour
     public Player1Controller player1;
     public Player2Controller player2;
 
+    public GameObject[] tutorials;
+
     /// <summary>
     /// Respawns characters to the current checkpoint
     /// </summary>
@@ -23,6 +25,21 @@ public class Checkpoint : MonoBehaviour
         {
             currentCheckpoint = collision.transform;
             collision.GetComponent<Collider2D>().enabled = false;
+
+            if (currentCheckpoint.name == "Checkpoint1")
+            {
+                tutorials[0].SetActive(true);
+            }
+
+            else if (currentCheckpoint.name == "Checkpoint2")
+            {
+                tutorials[1].SetActive(true);
+            }
+
+            else if (currentCheckpoint.name == "Checkpoint3")
+            {
+                tutorials[2].SetActive(true);
+            }
         }
     }
 }

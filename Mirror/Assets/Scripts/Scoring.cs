@@ -25,13 +25,7 @@ public class Scoring : MonoBehaviour
 
     private void Update()
     {
-
-        if (clear.cleared == true && CurrentLevelIndex == 2)
-        {
-            clear.LevelComplete();
-        }
-        
-        else if (clear.cleared == true && !level.levelCleared[CurrentLevelIndex])
+        if (clear.cleared == true && !level.levelCleared[CurrentLevelIndex])
         {
             ScoreSO.Value += 1;
 
