@@ -1628,6 +1628,14 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[43].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 682022340582592269, guid: 923853d6e3c9d6f4e89e695d302a65c6, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 682022340582592269, guid: 923853d6e3c9d6f4e89e695d302a65c6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1302123097
+      objectReference: {fileID: 0}
     - target: {fileID: 682022340582592304, guid: 923853d6e3c9d6f4e89e695d302a65c6, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
       value: 16
@@ -35877,7 +35885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7106223833908526238, guid: c60851ed08a35154382711e8f4ca80df, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60851ed08a35154382711e8f4ca80df, type: 3}
