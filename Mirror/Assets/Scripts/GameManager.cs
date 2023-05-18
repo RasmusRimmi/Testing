@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            asdasdasdasd();
+            EscapePressed();
             
         }
         if  (Input.GetKeyDown(KeyCode.R) && currentScene.name != "LevelSelect")
@@ -35,17 +35,9 @@ public class GameManager : MonoBehaviour
             Application.Quit();
             Debug.Log("Quit Game");
         }
-
-        if (Input.GetKeyDown(KeyCode.F9))
-        {
-            levelManager.ResetLevelClearStatuses();
-            scoreSO.Value = 0;
-            scoreText.text = scoreSO.Value + "/10";
-
-        }
     }
 
-    void asdasdasdasd()
+    void EscapePressed()
     {
         currentScene = SceneManager.GetActiveScene();
         
@@ -58,6 +50,5 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("LevelSelect");
         }
-
     }
 }
