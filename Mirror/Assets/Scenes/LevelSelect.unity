@@ -63219,7 +63219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  speed: 10
+  speed: 7
   jumpingPower: 14.5
   animator: {fileID: 3859369547235628812}
   rb: {fileID: 2315049817794661624}
