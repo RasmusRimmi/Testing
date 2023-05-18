@@ -21,6 +21,8 @@ public class Player1Controller : MonoBehaviour
     private float jumpBufferTime = 0.1f;
     private float jumpBufferCounter;
 
+    public ParticleSystem dust;
+
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -30,6 +32,7 @@ public class Player1Controller : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jumpBufferCounter = jumpBufferTime;
+
         }
         else
         {
@@ -45,6 +48,8 @@ public class Player1Controller : MonoBehaviour
             jumpBufferCounter = 0f;
 
             animator.SetBool("IsJumping", true);
+
+            CreateDust();
         }
 
         if (IsGrounded())
@@ -56,7 +61,7 @@ public class Player1Controller : MonoBehaviour
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
-        
+
     }
 
     private void FixedUpdate()
@@ -104,6 +109,8 @@ public class Player1Controller : MonoBehaviour
         gameObject.transform.localScale = currentscale;
 
         facingRight = !facingRight;
+
+        CreateDust();
     }
 
 
@@ -116,5 +123,10 @@ public class Player1Controller : MonoBehaviour
     public class BoolEvent : UnityEvent<bool>
     {
 
-    } 
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
+    }
 }

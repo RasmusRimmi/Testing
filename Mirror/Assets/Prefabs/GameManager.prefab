@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af72a3b101a2cc74fa27ff0051d8a6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clear: {fileID: 0}
+  clear: {fileID: 688657313340776552}
   ScoreSO: {fileID: 11400000, guid: c50e5c62a82908242b3d5b1785da70ab, type: 2}
   level: {fileID: 11400000, guid: 3643355577de0c94d92ae5994d150bc0, type: 2}
   CurrentLevelIndex: 0

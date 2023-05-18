@@ -17,7 +17,7 @@ public class MirrorBreak : MonoBehaviour
 
             if (cleared.levelCleared[i])
             {
-                levels[index].GetComponent<SpriteRenderer>().sprite = brokenMirror[index / 3];
+                levels[index].GetComponent<SpriteRenderer>().sprite = brokenMirror[index / 1];
             }
         }
     }

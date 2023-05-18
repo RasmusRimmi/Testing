@@ -25,6 +25,16 @@ public class Scoring : MonoBehaviour
 
     private void Update()
     {
+        if(clear.cleared == true && CurrentLevelIndex == 2)
+        {
+            level.levelCleared[CurrentLevelIndex] = true;
+
+            level.SaveToPlayerPrefs();
+
+            clear.LevelComplete();
+
+        }
+
         if (clear.cleared == true && !level.levelCleared[CurrentLevelIndex])
         {
             ScoreSO.Value += 1;

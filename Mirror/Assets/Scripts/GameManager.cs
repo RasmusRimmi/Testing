@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private FloatSO scoreSO;
 
-    [SerializeField] private Light2D endLight; 
-
     private Scene currentScene;
 
     [SerializeField] private LevelManager levelManager;
@@ -37,17 +35,6 @@ public class GameManager : MonoBehaviour
             Application.Quit();
             Debug.Log("Quit Game");
         }
-
-        if(scoreSO.Value == 10)
-        {
-            endLight.enabled = true;
-        }
-
-        else
-        {
-            endLight.enabled = false;
-        }
-
 
         if (Input.GetKeyDown(KeyCode.F9))
         {

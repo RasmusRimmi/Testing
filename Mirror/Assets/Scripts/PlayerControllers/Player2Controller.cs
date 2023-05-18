@@ -21,6 +21,8 @@ public class Player2Controller : MonoBehaviour
     private float jumpBufferTime = 0.1f;
     private float jumpBufferCounter;
 
+    public ParticleSystem dust;
+
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -45,6 +47,8 @@ public class Player2Controller : MonoBehaviour
             jumpBufferCounter = 0f;
 
             animator.SetBool("IsJumping", true);
+
+            CreateDust();
         }
 
         if (IsGrounded())
@@ -104,6 +108,8 @@ public class Player2Controller : MonoBehaviour
         gameObject.transform.localScale = currentscale;
 
         facingRight = !facingRight;
+
+        CreateDust();
     }
 
 
@@ -116,5 +122,10 @@ public class Player2Controller : MonoBehaviour
     public class BoolEvent : UnityEvent<bool>
     {
 
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 }
